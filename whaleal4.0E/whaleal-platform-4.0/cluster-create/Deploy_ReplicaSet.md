@@ -8,21 +8,16 @@ In the WAP console, click **MongoDB → Create Cluster → Create MongoDB** to e
 
 ### 1. Parameter Description
 
+- **Project**  
+  Select an existing Project, which is used for resource, network, and permission isolation.
 
+- **VPC**  
+  Select the VPC used by the MongoDB cluster based on the Project’s Region:
+  - **Default-VPC**  
+    The VPC where the WAP Server is deployed (available only when MongoDB and WAP are deployed in the same Region).
+  - **wap-vpc**  
+    If this VPC does not exist in the current Region, WAP will automatically create it.
 
-
-
-- **Project** 
-  
-  * Select an existing Project, which is used for resource, network, and permission isolation.
-- **VPC** 
-  
-  * Select the VPC used by the MongoDB cluster based on the Project’s Region:
-    * **Default-VPC**  
-      The VPC where the WAP Server is deployed (available only when MongoDB and WAP are deployed in the same Region).
-    * **wap-vpc**  
-      If this VPC does not exist in the current Region, WAP will automatically create it.
-  
 - **Cluster Name**  
   The name of the MongoDB replica set, used as the unique cluster-level identifier.
 
@@ -75,29 +70,36 @@ After clicking **Create**, WAP automatically performs the following steps within
 1. **Resource Validation**
    1. Validate the Project, Region, VPC, and Availability Zones.
    2. Verify the integrity and version compatibility of the MongoDB installation package.
+
 2. **Network and Security Configuration**
    1. Create or reuse the target VPC and subnets.
    2. Automatically configure Security Groups to allow required MongoDB ports.
    3. Configure internal network connectivity between nodes.
+
 3. **EC2 Instance Provisioning**
    1. Create instances based on the selected EC2 type and AZ distribution.
    2. Attach gp3 data volumes and configure IOPS.
    3. Automatically configure hostnames and private IP addresses.
+
 4. **Operating System Initialization**
    1. Execute OS tuning scripts (ulimit, sysctl, THP, NUMA, etc.).
    2. Install required dependencies for MongoDB runtime.
+
 5. **MongoDB Installation and Configuration**
    1. Extract and install the specified MongoDB version.
    2. Automatically generate `mongod.conf`.
    3. Configure data directories, log directories, and WiredTiger parameters.
+
 6. **Replica Set Initialization**
    1. Start all `mongod` instances.
    2. Automatically execute `rs.initiate()`.
    3. Complete Primary election based on node order.
+
 7. **Authentication and Security Initialization**
    1. Create the MongoDB administrator user.
    2. Enable MongoDB authentication.
    3. Store credentials in the WAP centralized credential management module.
+
 8. **Cluster Onboarding**
    1. Register the cluster with the WAP platform.
    2. Enable monitoring, logging, and alerting.
