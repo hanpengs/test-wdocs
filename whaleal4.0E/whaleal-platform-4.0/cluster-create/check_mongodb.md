@@ -31,10 +31,11 @@ After a MongoDB cluster is created, it is recommended to perform a comprehensive
 **Validation Points:**
 
 - **Replica Set**
+
   - Only **one Primary** node
   - All other nodes are **Secondary**
-
 - **Sharded Cluster**
+
   - Config Server, Shard, and Mongos components are all in a healthy state
   - All components are online with no active alerts
 
@@ -62,5 +63,4 @@ On the cluster details page, you can obtain MongoDB connection information, incl
 
 Use a MongoDB client to verify connectivity, for example:
 
-```bash
-mongosh "mongodb://<username>:<password>@<host>:<port>/?authSource=admin"
+mongosh "mongodb://{username}:{password}@{host}:{port}/?authSource=admin"
