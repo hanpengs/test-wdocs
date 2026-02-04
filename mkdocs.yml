@@ -1,0 +1,133 @@
+# Site Settings
+site_name: Whaleal docs
+site_author: whaleal
+docs_dir: whaleal4.0E   # docs_dir: docs # Obsidian Vault
+#site_dir: docs4.0
+
+repo_name: whaleal-docs
+repo_url: https://hanpengs.github.io/
+
+copyright: © 2026 | @whaleal
+
+
+# Custom Homepage Elements
+home_cover_image: images/docs-logo.png # This path starts at your root mkdocs directory.
+home_tagline: Whaleal
+home_description: |
+  Welcome to the Whaleal Product Documentation website, which provides comprehensive documentation to help you understand and use our products.
+
+# Gradient Color
+home_gradient_hsla: hsla(0deg, 0%, 100%, 1) # Default Green: hsla(160deg,47%,55%,1)
+
+# Custom Homepage Button(s)
+home_button1_name: Whaleal Platform                  # Comment this parameter out to remove the button.
+home_button1_url: whaleal-platform-4.0/                       # This path starts at your root mkdocs directory.
+home_button1_theme: md-button md-button--primary # Options: "md-button", "md-button md-button--primary"
+home_button1_icon: people                        # Options: "people", "gear", "image"
+home_button1_blurb: |                            # Short description of this button / section.
+  Whaleal Platform (WAP) is an intelligent operation, maintenance and hosting platform that provides real-time monitoring and management of your MongoDB services.
+
+# home_button3_name: Document Data Transfer   # Comment this parameter out to remove the button.
+# home_button3_url: document-data-transfer/    # This path starts at your root mkdocs directory.
+# home_button3_theme: md-button # Options: "md-button", "md-button md-button--primary"
+# home_button3_icon: image      # Options: "people", "gear", "image"
+# home_button3_blurb: |         # Short description of this button / section.
+#   Document Data Transfer (DDT) is a MongoDB database migration and synchronization tool that supports data transmission between different MongoDB architectures.
+
+# Homepage Code Execution
+home_execute_js: | # Javascript to execute when accessing the homepage
+  console.log("This is an example!");
+
+
+# Material Configuration
+theme:
+  name: material
+  favicon: 'images/logo.png'
+  logo: 'images/logo1.svg'
+  custom_dir: assets # Contains custom 'home.html' coverpage (and 'main.html')
+
+
+  features:
+    - navigation.indexes          # Implied section 'index.md' files
+    - navigation.tabs             # Static upper section tabs (exist)
+    # - navigation.tabs.sticky      # Static upper section tabs (stay)
+    - navigation.footer           # Add 'previous' and 'next' buttons in the footer
+    - navigation.instant          # Keep navigation from reloading
+    - navigation.instant.progress # Display page loading progress-bar ( > 400ms)
+    - search.highlight            # Highlight all occurrences of queried string
+    - search.share                # Search Query can be copied to Clipboard
+    - search.suggest              # Display likeliest completion for the last queried word
+    - content.code.copy
+    # - announce.dismiss
+    - navigation.top
+    - navigation.version
+    
+
+  palette:
+    # Light Mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: HSLA
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to Dark Mode
+
+    # Dark Mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to Light Mode
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+    
+nav:
+  - Home: index.md
+  
+  - Whaleal Platform 4.0:
+      - whaleal-platform-4.0/index.md
+      - Whaleal Overview:
+        - WAP 4.0 New Version Features: whaleal-platform-4.0/whaleal-overview/whaleal-4.0-new-version-features.md
+        - WAP 4.0 Architecture Overview: whaleal-platform-4.0/whaleal-overview/whaleal-architecture.md
+        - WAP 4.0 vs Previous Versions: whaleal-platform-4.0/whaleal-overview/whaleal-version-comparison.md
+      - Install Whaleal:
+        - Install Whaleal in AWS Marketplace: whaleal-platform-4.0/Install-wap/quick-start-on-aws-marketplace.md
+      - Projects:
+        - Projects Overview: whaleal-platform-4.0/project/projects-overview-aws.md
+      - Cluster Creation:
+        - MongoDB Replica Set Creation: whaleal-platform-4.0/cluster-create/Deploy_ReplicaSet.md
+        - MongoDB Sharded Cluster Creation: whaleal-platform-4.0/cluster-create/Deploy_Sharded_Cluster.md
+        - Auto Scaling Policy Overview: whaleal-platform-4.0/cluster-create/Automatic_scaling.md
+        - Cluster Verification: whaleal-platform-4.0/cluster-create/check_mongodb.md
+      - WAP 4.0 User Guide:
+        - WAP 4.0 User Manual (Full Version): whaleal-platform-4.0/whaleal-full-feature-flow/whaleal-full-feature-flow.md
+      - Backup:
+        - backup: whaleal-platform-4.0/backup/Backup_Restore.md
+      - Settings:
+        - Collection Granularity: whaleal-platform-4.0/settings/03-collection-granularity.md
+        - Configure Kubernetes: whaleal-platform-4.0/settings/04-kubernetes-settings.md
+        - Configure S3: whaleal-platform-4.0/settings/05-s3-configuration.md
+        - AWS Credential: whaleal-platform-4.0/settings/08-aws-credential.md
+        - Storage: whaleal-platform-4.0/settings/09-storage.md
+      - Frequently Asked Questions:
+        - Installation Issues: whaleal-platform-4.0/faq/faq_install.md
+        - Operations & Cluster Issues: whaleal-platform-4.0/faq/faq_maintenance.md
+        - Backup & Restore Issues: whaleal-platform-4.0/faq/faq_backup.md
+        - Performance Issues: whaleal-platform-4.0/faq/faq_performance.md
+
+plugins:
+  - search
+  - roamlinks
+  - mike
+
+extra:
+  version:
+    provider: mike
