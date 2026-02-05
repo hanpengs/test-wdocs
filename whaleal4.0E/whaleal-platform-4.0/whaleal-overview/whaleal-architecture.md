@@ -1,5 +1,3 @@
-### WAP 4.0 Architecture Overview
-
 ## 1. Architectural Objectives
 
 The WAP 4.0 architecture is designed around the following core objectives:
@@ -22,16 +20,16 @@ WAP 4.0 is composed of five layers: Control Layer, Service Layer, Orchestration 
 ┌────────────────────────────────────────────┐
 │                Control Layer (UI)          │
 │  Web Console / User Entry / Permissions &  │
-│  Project Management                         │
+│  Project Management                        │
 └────────────────────────────────────────────┘
                     │
                     ▼
 ┌────────────────────────────────────────────┐
 │                Platform Service Layer      │
 │  Backend Service Cluster / API Services /  │
-│  Business Logic Processing                  │
+│  Business Logic Processing                 │
 │  User Management / Policy Management /     │
-│  Task Management                             │
+│  Task Management                           │
 └────────────────────────────────────────────┘
                     │
                     ▼
@@ -40,29 +38,28 @@ WAP 4.0 is composed of five layers: Control Layer, Service Layer, Orchestration 
 │                Scheduling Layer            │
 │  • AWS Resource Orchestration (EC2 / VPC / │
 │    Subnets / Security Groups)              │
-│  • MongoDB Cluster Automated Deployment     │
+│  • MongoDB Cluster Automated Deployment    │
 │  • Backup / Restore Workflow Orchestration │
-│  • Elastic Scaling Policy Execution         │
+│  • Elastic Scaling Policy Execution        │
 └────────────────────────────────────────────┘
                     │
                     ▼
 ┌────────────────────────────────────────────┐
 │             Execution & Collection Layer   │
 │  Whaleal Agent / Command Execution /       │
-│  Metrics Collection                          │
-│  Log Collection / Status Reporting          │
+│  Metrics Collection                        │
+│  Log Collection / Status Reporting         │
 └────────────────────────────────────────────┘
                     │
                     ▼
 ┌────────────────────────────────────────────┐
-│                Resource Layer               │
+│                Resource Layer              │
 │  AWS Cloud Resources (EC2/EBS/VPC, etc.)   │
 │  MongoDB Clusters (Replica Sets / Sharded  │
 │  Clusters)                                 │
 │  Backup Nodes / Restore Nodes / Storage    │
 └────────────────────────────────────────────┘
 ```
-
 
 ## 3. Core Components Description
 
@@ -140,4 +137,3 @@ Resources ultimately managed and orchestrated by the platform include:
 * Deep integration with AWS for infrastructure and database automation
 * Clear separation of layers, ensuring scalability and maintainability
 * Process-driven, automated operational capabilities, significantly reducing manual complexity
-

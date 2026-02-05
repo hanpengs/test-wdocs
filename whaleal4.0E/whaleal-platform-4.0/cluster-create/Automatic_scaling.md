@@ -109,6 +109,8 @@ When scaling conditions are met and no exclusion rules are triggered, WAP automa
 | 64C / 128GB  | 128C / 256GB  |
 | 128C / 256GB | 128C / 512GB  |
 
+
+
 The scaling process is fully automated by WAP and includes:
 
 - EC2 instance resizing
@@ -151,7 +153,6 @@ If the following metrics exceed thresholds, **auto scaling will be suppressed**.
 
 ### VI. Policy Summary
 
-Auto scaling is **not a universal solution**.
-WAP combines **resource metrics**, **MongoDB internal behavior**, and **query characteristics** to make safe and stable scaling decisions.
+Auto scaling is **not a universal solution**.WAP combines **resource metrics**, **MongoDB internal behavior**, and **query characteristics** to make safe and stable scaling decisions.
 
 This approach avoids ineffective scaling caused by SQL issues, missing indexes, or inefficient query patterns, ensuring system stability while scaling only when it truly adds value.

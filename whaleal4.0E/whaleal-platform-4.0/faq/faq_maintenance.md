@@ -1,21 +1,21 @@
 # Whaleal Platform (WAP) FAQ – Operations & Cluster Issues
 
-**WAP Version**: 4.0  
-**Document Type**: Operations FAQ  
+**WAP Version**: 4.0
+**Document Type**: Operations FAQ
 **Description**: This document summarizes common operational and cluster issues in WAP, including network, node, and cluster runtime problems, with recommended solutions for daily operations and troubleshooting.
 
 ---
 
 > **Severity / Impact Scope Definitions**
 >
-> - **Severity Levels**: Critical, Major, Minor  
+> - **Severity Levels**: Critical, Major, Minor
 > - **Impact Scope**: Single Node, Cluster, Full Platform
 
 ---
 
 ## Q3: VPC Unreachable – MongoDB Nodes Cannot Communicate
 
-**Severity**: Critical  
+**Severity**: Critical
 **Impact Scope**: Cluster
 
 **Possible Causes:**
@@ -36,7 +36,7 @@
 
 ## Q4: Agent Registration Fails
 
-**Severity**: Major  
+**Severity**: Major
 **Impact Scope**: Single Node
 
 **Possible Causes:**
@@ -55,7 +55,7 @@
 
 ## Q5: MongoDB Connection Failure
 
-**Severity**: Critical  
+**Severity**: Critical
 **Impact Scope**: Cluster
 
 **Possible Causes:**
@@ -67,11 +67,8 @@
 
 **Recommended Solutions:**
 
-```bash
-# Check MongoDB process status
-ps -ef | grep mongo
-
-# Test connection manually using mongosh
-mongosh "mongodb://<username>:<password>@<host>:<port>/?authSource=admin"
-
-# Verify authentication method and authSource configuration
+* Check MongoDB process status
+* ps -ef | grep mongo
+* Test connection manually using mongosh
+* mongosh "mongodb://{username}:{password}@{host}:{port}/?authSource=admin"
+* Verify authentication method and authSource configuration

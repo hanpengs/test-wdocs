@@ -18,7 +18,7 @@
 
 1.3 Execute the one-click start command:
 
-<pre class="overflow-visible! px-0!" data-start="714" data-end="749"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="sticky top-[calc(--spacing(9)+var(--header-height))] @w-xl/main:top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>sh start.sh <public_IP>
+<pre class="overflow-visible! px-0!" data-start="714" data-end="749"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="sticky top-[calc(--spacing(9)+var(--header-height))] @w-xl/main:top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>sh start.sh {Public_IP}
 </span></span></code></div></div></pre>
 
 After startup, ensure there are no errors and that the WAP platform is running normally.
@@ -36,7 +36,7 @@ After startup, ensure there are no errors and that the WAP platform is running n
 
 2.3 Upon first login, the system will require a password change:
 
-* Example new password: `Jinmuinfi.123`
+* Example new password: `Whaleal.123`
 
 2.4 Log in again using the new password.
 2.5 After a successful login, the system will automatically enter the onboarding guide.
@@ -111,7 +111,7 @@ Fill out the creation page as follows:
 * Username/password authentication enabled by default
 * Example credentials:
   * Username: `admin`
-  * Password: `yangshuai123`
+  * Password: `whakeal123`
 
 Once created, the page will automatically navigate to the MongoDB cluster list.
 

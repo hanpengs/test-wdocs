@@ -1,21 +1,21 @@
 # Whaleal Platform (WAP) FAQ – Performance Issues
 
-**WAP Version**: 4.0  
-**Document Type**: Performance FAQ  
+**WAP Version**: 4.0
+**Document Type**: Performance FAQ
 **Description**: This document summarizes common MongoDB performance and cluster stability issues in WAP, with recommended solutions for performance optimization and routine monitoring.
 
 ---
 
 > **Severity / Impact Scope Definitions**
 >
-> - **Severity Levels**: Critical, Major, Minor  
+> - **Severity Levels**: Critical, Major, Minor
 > - **Impact Scope**: Single Node, Cluster, Full Platform
 
 ---
 
 ## Q9: MongoDB Performance Bottlenecks (High CPU / IO)
 
-**Severity**: Major  
+**Severity**: Major
 **Impact Scope**: Cluster
 
 **Possible Causes:**
@@ -36,13 +36,13 @@
 
 ## Q10: Cluster Instability – Frequent Fluctuations or Restarts
 
-**Severity**: Critical  
+**Severity**: Critical
 **Impact Scope**: Cluster
 
 **Possible Causes:**
 
 - Improper WiredTiger cache configuration
-- Persistent high disk IO load
+- Persistent high disk I/O load
 - OS parameters not tuned according to best practices
 
 **Recommended Solutions:**
